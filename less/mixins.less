@@ -1,1 +1,38 @@
 // Mixins in here
+
+.space-between(){
+	display:flex;
+	justify-content: space-between;
+	align-items:center;
+}
+
+.wrap(){
+	display:flex;
+	flex-wrap: wrap;
+}
+
+.bordered() {
+	padding: 20px 0;
+	border-top: 1px dashed @navigation-border;
+	// border-bottom: 1px dashed gray;
+}
+
+.custom-btn(@bg-color:#008080, @width:200px, @font-color:white){
+	display: block;
+	background-color: @bg-color;
+	margin: 0 10px 20px;
+	cursor: pointer;
+	width: @width;
+	height: 45px;
+	font-size: 2rem;
+	border-radius: 10px;
+	color:@font-color;
+
+	&:hover{
+		background-color:@font-color;
+		color:@bg-color;
+	}
+}
+
+@desktop: ~'( max-width: 1399px )';
+@phone: ~'( max-width: 500px )';
